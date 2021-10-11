@@ -243,6 +243,7 @@ namespace SprintOneFramework
                 }          
             }
             Console.WriteLine("Mode is " + mode);
+            //this is a github test
         }
     }
 }
