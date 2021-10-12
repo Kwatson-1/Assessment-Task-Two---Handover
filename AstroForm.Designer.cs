@@ -43,6 +43,11 @@ namespace SprintOneFramework
             this.sequentialButton = new System.Windows.Forms.Button();
             this.modeButton = new System.Windows.Forms.Button();
             this.textBoxRange = new System.Windows.Forms.TextBox();
+            this.MidExtremeButton = new System.Windows.Forms.Button();
+            this.ButtonAverage = new System.Windows.Forms.Button();
+            this.AverageTextBox = new System.Windows.Forms.TextBox();
+            this.ModeTextBox = new System.Windows.Forms.TextBox();
+            this.MidExtremeTextBox = new System.Windows.Forms.TextBox();
             this.statusStripErrorMsg.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,9 +55,9 @@ namespace SprintOneFramework
             // 
             this.ButtonFill.BackColor = System.Drawing.Color.MistyRose;
             this.ButtonFill.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.ButtonFill.Location = new System.Drawing.Point(139, 378);
+            this.ButtonFill.Location = new System.Drawing.Point(138, 49);
             this.ButtonFill.Name = "ButtonFill";
-            this.ButtonFill.Size = new System.Drawing.Size(100, 23);
+            this.ButtonFill.Size = new System.Drawing.Size(78, 38);
             this.ButtonFill.TabIndex = 0;
             this.ButtonFill.Text = "Auto Fill";
             this.ButtonFill.UseVisualStyleBackColor = false;
@@ -63,26 +68,26 @@ namespace SprintOneFramework
             this.ListBoxOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ListBoxOutput.FormattingEnabled = true;
             this.ListBoxOutput.ItemHeight = 16;
-            this.ListBoxOutput.Location = new System.Drawing.Point(13, 13);
+            this.ListBoxOutput.Location = new System.Drawing.Point(12, 49);
             this.ListBoxOutput.Name = "ListBoxOutput";
-            this.ListBoxOutput.Size = new System.Drawing.Size(97, 388);
+            this.ListBoxOutput.Size = new System.Drawing.Size(120, 260);
             this.ListBoxOutput.TabIndex = 1;
             this.ListBoxOutput.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ListBoxOutput_MouseClick);
             // 
             // TextBoxInput
             // 
-            this.TextBoxInput.Location = new System.Drawing.Point(139, 13);
+            this.TextBoxInput.Location = new System.Drawing.Point(12, 23);
             this.TextBoxInput.Name = "TextBoxInput";
             this.TextBoxInput.ShortcutsEnabled = false;
-            this.TextBoxInput.Size = new System.Drawing.Size(100, 20);
+            this.TextBoxInput.Size = new System.Drawing.Size(394, 20);
             this.TextBoxInput.TabIndex = 2;
             this.TextBoxInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxInput_KeyPress);
             // 
             // ButtonBubbleSort
             // 
-            this.ButtonBubbleSort.Location = new System.Drawing.Point(140, 40);
+            this.ButtonBubbleSort.Location = new System.Drawing.Point(138, 253);
             this.ButtonBubbleSort.Name = "ButtonBubbleSort";
-            this.ButtonBubbleSort.Size = new System.Drawing.Size(99, 23);
+            this.ButtonBubbleSort.Size = new System.Drawing.Size(78, 38);
             this.ButtonBubbleSort.TabIndex = 3;
             this.ButtonBubbleSort.Text = "Bubble Sort";
             this.ButtonBubbleSort.UseVisualStyleBackColor = true;
@@ -90,9 +95,9 @@ namespace SprintOneFramework
             // 
             // ButtonBinarySearch
             // 
-            this.ButtonBinarySearch.Location = new System.Drawing.Point(140, 70);
+            this.ButtonBinarySearch.Location = new System.Drawing.Point(138, 212);
             this.ButtonBinarySearch.Name = "ButtonBinarySearch";
-            this.ButtonBinarySearch.Size = new System.Drawing.Size(99, 23);
+            this.ButtonBinarySearch.Size = new System.Drawing.Size(78, 38);
             this.ButtonBinarySearch.TabIndex = 4;
             this.ButtonBinarySearch.Text = "Binary Search";
             this.ButtonBinarySearch.UseVisualStyleBackColor = true;
@@ -100,9 +105,9 @@ namespace SprintOneFramework
             // 
             // ButtonAdd
             // 
-            this.ButtonAdd.Location = new System.Drawing.Point(140, 124);
+            this.ButtonAdd.Location = new System.Drawing.Point(138, 90);
             this.ButtonAdd.Name = "ButtonAdd";
-            this.ButtonAdd.Size = new System.Drawing.Size(99, 23);
+            this.ButtonAdd.Size = new System.Drawing.Size(78, 38);
             this.ButtonAdd.TabIndex = 5;
             this.ButtonAdd.Text = "Add";
             this.ButtonAdd.UseVisualStyleBackColor = true;
@@ -110,9 +115,9 @@ namespace SprintOneFramework
             // 
             // ButtonEdit
             // 
-            this.ButtonEdit.Location = new System.Drawing.Point(139, 154);
+            this.ButtonEdit.Location = new System.Drawing.Point(138, 172);
             this.ButtonEdit.Name = "ButtonEdit";
-            this.ButtonEdit.Size = new System.Drawing.Size(100, 23);
+            this.ButtonEdit.Size = new System.Drawing.Size(78, 38);
             this.ButtonEdit.TabIndex = 6;
             this.ButtonEdit.Text = "Edit";
             this.ButtonEdit.UseVisualStyleBackColor = true;
@@ -120,9 +125,9 @@ namespace SprintOneFramework
             // 
             // ButtonDelete
             // 
-            this.ButtonDelete.Location = new System.Drawing.Point(139, 184);
+            this.ButtonDelete.Location = new System.Drawing.Point(138, 131);
             this.ButtonDelete.Name = "ButtonDelete";
-            this.ButtonDelete.Size = new System.Drawing.Size(100, 23);
+            this.ButtonDelete.Size = new System.Drawing.Size(78, 38);
             this.ButtonDelete.TabIndex = 7;
             this.ButtonDelete.Text = "Delete";
             this.ButtonDelete.UseVisualStyleBackColor = true;
@@ -132,9 +137,9 @@ namespace SprintOneFramework
             // 
             this.statusStripErrorMsg.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.StatusMessage});
-            this.statusStripErrorMsg.Location = new System.Drawing.Point(0, 423);
+            this.statusStripErrorMsg.Location = new System.Drawing.Point(0, 320);
             this.statusStripErrorMsg.Name = "statusStripErrorMsg";
-            this.statusStripErrorMsg.Size = new System.Drawing.Size(279, 22);
+            this.statusStripErrorMsg.Size = new System.Drawing.Size(437, 22);
             this.statusStripErrorMsg.TabIndex = 8;
             this.statusStripErrorMsg.Text = "statusStrip";
             // 
@@ -146,9 +151,9 @@ namespace SprintOneFramework
             // 
             // rangeButton
             // 
-            this.rangeButton.Location = new System.Drawing.Point(140, 213);
+            this.rangeButton.Location = new System.Drawing.Point(222, 172);
             this.rangeButton.Name = "rangeButton";
-            this.rangeButton.Size = new System.Drawing.Size(100, 23);
+            this.rangeButton.Size = new System.Drawing.Size(78, 38);
             this.rangeButton.TabIndex = 9;
             this.rangeButton.Text = "Range";
             this.rangeButton.UseVisualStyleBackColor = true;
@@ -156,9 +161,9 @@ namespace SprintOneFramework
             // 
             // sequentialButton
             // 
-            this.sequentialButton.Location = new System.Drawing.Point(139, 242);
+            this.sequentialButton.Location = new System.Drawing.Point(222, 212);
             this.sequentialButton.Name = "sequentialButton";
-            this.sequentialButton.Size = new System.Drawing.Size(100, 37);
+            this.sequentialButton.Size = new System.Drawing.Size(78, 38);
             this.sequentialButton.TabIndex = 10;
             this.sequentialButton.Text = "Sequential Search";
             this.sequentialButton.UseVisualStyleBackColor = true;
@@ -166,9 +171,9 @@ namespace SprintOneFramework
             // 
             // modeButton
             // 
-            this.modeButton.Location = new System.Drawing.Point(139, 285);
+            this.modeButton.Location = new System.Drawing.Point(222, 90);
             this.modeButton.Name = "modeButton";
-            this.modeButton.Size = new System.Drawing.Size(100, 23);
+            this.modeButton.Size = new System.Drawing.Size(78, 38);
             this.modeButton.TabIndex = 11;
             this.modeButton.Text = "Mode";
             this.modeButton.UseVisualStyleBackColor = true;
@@ -176,17 +181,70 @@ namespace SprintOneFramework
             // 
             // textBoxRange
             // 
-            this.textBoxRange.Location = new System.Drawing.Point(139, 330);
+            this.textBoxRange.Location = new System.Drawing.Point(302, 172);
+            this.textBoxRange.Multiline = true;
             this.textBoxRange.Name = "textBoxRange";
             this.textBoxRange.ReadOnly = true;
-            this.textBoxRange.Size = new System.Drawing.Size(100, 20);
+            this.textBoxRange.Size = new System.Drawing.Size(104, 38);
             this.textBoxRange.TabIndex = 12;
+            // 
+            // MidExtremeButton
+            // 
+            this.MidExtremeButton.Location = new System.Drawing.Point(222, 131);
+            this.MidExtremeButton.Name = "MidExtremeButton";
+            this.MidExtremeButton.Size = new System.Drawing.Size(78, 38);
+            this.MidExtremeButton.TabIndex = 13;
+            this.MidExtremeButton.Text = "Mid-extreme";
+            this.MidExtremeButton.UseVisualStyleBackColor = true;
+            this.MidExtremeButton.Click += new System.EventHandler(this.MidExtremeButton_Click);
+            // 
+            // ButtonAverage
+            // 
+            this.ButtonAverage.Location = new System.Drawing.Point(222, 49);
+            this.ButtonAverage.Name = "ButtonAverage";
+            this.ButtonAverage.Size = new System.Drawing.Size(78, 38);
+            this.ButtonAverage.TabIndex = 14;
+            this.ButtonAverage.Text = "Average";
+            this.ButtonAverage.UseVisualStyleBackColor = true;
+            this.ButtonAverage.Click += new System.EventHandler(this.ButtonAverage_Click);
+            // 
+            // AverageTextBox
+            // 
+            this.AverageTextBox.Location = new System.Drawing.Point(302, 49);
+            this.AverageTextBox.Multiline = true;
+            this.AverageTextBox.Name = "AverageTextBox";
+            this.AverageTextBox.ReadOnly = true;
+            this.AverageTextBox.Size = new System.Drawing.Size(104, 38);
+            this.AverageTextBox.TabIndex = 15;
+            // 
+            // ModeTextBox
+            // 
+            this.ModeTextBox.Location = new System.Drawing.Point(302, 90);
+            this.ModeTextBox.Multiline = true;
+            this.ModeTextBox.Name = "ModeTextBox";
+            this.ModeTextBox.ReadOnly = true;
+            this.ModeTextBox.Size = new System.Drawing.Size(104, 38);
+            this.ModeTextBox.TabIndex = 16;
+            // 
+            // MidExtremeTextBox
+            // 
+            this.MidExtremeTextBox.Location = new System.Drawing.Point(302, 132);
+            this.MidExtremeTextBox.Multiline = true;
+            this.MidExtremeTextBox.Name = "MidExtremeTextBox";
+            this.MidExtremeTextBox.ReadOnly = true;
+            this.MidExtremeTextBox.Size = new System.Drawing.Size(104, 38);
+            this.MidExtremeTextBox.TabIndex = 17;
             // 
             // AstroForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(279, 445);
+            this.ClientSize = new System.Drawing.Size(437, 342);
+            this.Controls.Add(this.MidExtremeTextBox);
+            this.Controls.Add(this.ModeTextBox);
+            this.Controls.Add(this.AverageTextBox);
+            this.Controls.Add(this.ButtonAverage);
+            this.Controls.Add(this.MidExtremeButton);
             this.Controls.Add(this.textBoxRange);
             this.Controls.Add(this.modeButton);
             this.Controls.Add(this.sequentialButton);
@@ -225,6 +283,11 @@ namespace SprintOneFramework
         private System.Windows.Forms.Button sequentialButton;
         private System.Windows.Forms.Button modeButton;
         private System.Windows.Forms.TextBox textBoxRange;
+        private System.Windows.Forms.Button MidExtremeButton;
+        private System.Windows.Forms.Button ButtonAverage;
+        private System.Windows.Forms.TextBox AverageTextBox;
+        private System.Windows.Forms.TextBox ModeTextBox;
+        private System.Windows.Forms.TextBox MidExtremeTextBox;
     }
 }
 

@@ -8,6 +8,7 @@ namespace SprintOneFramework
 {
     public partial class AstroForm : Form
     {
+        #region Properties
         public AstroForm()
         {
             InitializeComponent();
@@ -16,6 +17,8 @@ namespace SprintOneFramework
         int[] DataArray = new int[ArraySize];
         bool Sorted = false;
         int ArrayElements = 0;
+        #endregion
+        #region Binary Search
         private void ButtonBinarySearch_Click(object sender, EventArgs e)
         {
             StatusMessage.Text = "";
@@ -62,6 +65,8 @@ namespace SprintOneFramework
                 StatusMessage.Text = "ERROR: Array not Sorted or Input not entered";
             }
         }
+        #endregion
+        #region Bubble Sort
         private void ButtonBubbleSort_Click(object sender, EventArgs e)
         {
             StatusMessage.Text = "";
@@ -80,7 +85,9 @@ namespace SprintOneFramework
             Sorted = true;
             StatusMessage.Text = "Array is sorted";
             DisplayArray();
-        }        
+        }
+        #endregion
+        #region TextBox and ListBox
         private void TextBoxInput_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
@@ -103,6 +110,8 @@ namespace SprintOneFramework
                 StatusMessage.Text = "ERROR: Please select from the List Box";
             }
         }
+        #endregion
+        #region Fill Button
         private void ButtonFill_Click(object sender, EventArgs e)
         {
             StatusMessage.Text = "";
@@ -115,6 +124,8 @@ namespace SprintOneFramework
             DisplayArray();
             StatusMessage.Text = "Array filled with Random Numbers";
         }
+        #endregion
+        #region Display Array
         private void DisplayArray()
         {
             ListBoxOutput.Items.Clear();
@@ -125,6 +136,8 @@ namespace SprintOneFramework
                     ListBoxOutput.Items.Add("  " + DataArray[x]);
             }
         }
+        #endregion
+        #region Add Button
         private void ButtonAdd_Click(object sender, EventArgs e)
         {
             StatusMessage.Text = "";
@@ -148,6 +161,8 @@ namespace SprintOneFramework
                 StatusMessage.Text = "ERROR: Array full or Number not entered";
             }           
         }
+        #endregion
+        #region Edit Button
         private void ButtonEdit_Click(object sender, EventArgs e)
         {
             StatusMessage.Text = "";
@@ -165,6 +180,8 @@ namespace SprintOneFramework
                 StatusMessage.Text = "ERROR: Please select from the List Box";
             }    
         }
+        #endregion
+        #region Delete Button
         private void ButtonDelete_Click(object sender, EventArgs e)
         {
             StatusMessage.Text = "";
@@ -188,7 +205,8 @@ namespace SprintOneFramework
                 StatusMessage.Text = "ERROR: Number not entered";
             }
         }
-
+        #endregion
+        #region Range Button
         private void rangeButton_Click(object sender, EventArgs e)
         {
             int lowestNumber = DataArray[0];
@@ -208,7 +226,8 @@ namespace SprintOneFramework
             textBoxRange.Text = Convert.ToString(highestNumber - lowestNumber);
 
         }
-
+        #endregion
+        #region Sequencial Button
         private void sequentialButton_Click(object sender, EventArgs e)
         {
             int targetValue = int.Parse(TextBoxInput.Text);
@@ -218,7 +237,8 @@ namespace SprintOneFramework
                 return;
 
         }
-
+        #endregion
+        #region Mode Button
         private void modeButton_Click(object sender, EventArgs e)
         {
             int element;
@@ -240,10 +260,56 @@ namespace SprintOneFramework
                 {
                     frequency = counter;
                     mode = element;
-                }          
+                }
+                // added 
+                ModeTextBox.Text = element.ToString();
+                StatusMessage.Text = "The frequency of elements in the list is: " + frequency;
             }
             Console.WriteLine("Mode is " + mode);
             //this is a github test
+            //this is another github test
+            // anotheeer test
         }
+        #endregion
+        #region Average Button
+        private void ButtonAverage_Click(object sender, EventArgs e)
+        {
+
+            int sum = 0;
+            int average = 0;
+
+            for (int x = 0; x < DataArray.Length; x++)
+            {
+                sum += DataArray[x];
+            }
+            average = sum / DataArray.Length;
+            AverageTextBox.Text = average.ToString();
+            StatusMessage.Text = "The sum of elements in the list is: " + sum;
+        }
+        #endregion
+        #region Mid-Extreme Button
+        private void MidExtremeButton_Click(object sender, EventArgs e)
+        {
+            int minRange = DataArray[0];
+            int maxRange = DataArray[0];
+
+            int midExtreme = (minRange + maxRange) / 2;
+
+            for (int i = 0; i < ArraySize; i++)
+            {
+                if (DataArray[i] > maxRange)
+                {
+                    maxRange = DataArray[i];
+                }
+                else if (DataArray[i] < minRange)
+                {
+                    minRange = DataArray[i];
+                }
+                midExtreme = (minRange + maxRange) / 2;
+                MidExtremeTextBox.Text = midExtreme.ToString();
+                StatusMessage.Text = "The mid-extreme of this array is: " + midExtreme;
+            }
+         }
+        #endregion
     }
 }
