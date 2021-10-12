@@ -95,7 +95,7 @@ namespace SprintOneFramework
             // 
             // ButtonBinarySearch
             // 
-            this.ButtonBinarySearch.Location = new System.Drawing.Point(138, 212);
+            this.ButtonBinarySearch.Location = new System.Drawing.Point(138, 213);
             this.ButtonBinarySearch.Name = "ButtonBinarySearch";
             this.ButtonBinarySearch.Size = new System.Drawing.Size(78, 38);
             this.ButtonBinarySearch.TabIndex = 4;
@@ -161,7 +161,7 @@ namespace SprintOneFramework
             // 
             // sequentialButton
             // 
-            this.sequentialButton.Location = new System.Drawing.Point(222, 212);
+            this.sequentialButton.Location = new System.Drawing.Point(222, 213);
             this.sequentialButton.Name = "sequentialButton";
             this.sequentialButton.Size = new System.Drawing.Size(78, 38);
             this.sequentialButton.TabIndex = 10;
@@ -228,7 +228,7 @@ namespace SprintOneFramework
             // 
             // MidExtremeTextBox
             // 
-            this.MidExtremeTextBox.Location = new System.Drawing.Point(302, 132);
+            this.MidExtremeTextBox.Location = new System.Drawing.Point(302, 131);
             this.MidExtremeTextBox.Multiline = true;
             this.MidExtremeTextBox.Name = "MidExtremeTextBox";
             this.MidExtremeTextBox.ReadOnly = true;

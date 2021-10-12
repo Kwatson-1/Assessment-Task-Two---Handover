@@ -8,3 +8,13 @@ C:\Users\30045325\Documents\GitHub\Sprint-Two\obj\Debug\SprintOneFramework.cspro
 C:\Users\30045325\Documents\GitHub\Sprint-Two\obj\Debug\SprintOneFramework.csproj.CoreCompileInputs.cache
 C:\Users\30045325\Documents\GitHub\Sprint-Two\obj\Debug\SprintOneFramework.exe
 C:\Users\30045325\Documents\GitHub\Sprint-Two\obj\Debug\SprintOneFramework.pdb
+C:\Users\30048165\Documents\GitHub\Sprint-Two\bin\Debug\SprintOneFramework.exe.config
+C:\Users\30048165\Documents\GitHub\Sprint-Two\bin\Debug\SprintOneFramework.exe
+C:\Users\30048165\Documents\GitHub\Sprint-Two\bin\Debug\SprintOneFramework.pdb
+C:\Users\30048165\Documents\GitHub\Sprint-Two\obj\Debug\SprintOneFramework.csproj.AssemblyReference.cache
+C:\Users\30048165\Documents\GitHub\Sprint-Two\obj\Debug\SprintOneFramework.AstroForm.resources
+C:\Users\30048165\Documents\GitHub\Sprint-Two\obj\Debug\SprintOneFramework.Properties.Resources.resources
+C:\Users\30048165\Documents\GitHub\Sprint-Two\obj\Debug\SprintOneFramework.csproj.GenerateResource.cache
+C:\Users\30048165\Documents\GitHub\Sprint-Two\obj\Debug\SprintOneFramework.csproj.CoreCompileInputs.cache
+C:\Users\30048165\Documents\GitHub\Sprint-Two\obj\Debug\SprintOneFramework.exe
+C:\Users\30048165\Documents\GitHub\Sprint-Two\obj\Debug\SprintOneFramework.pdb

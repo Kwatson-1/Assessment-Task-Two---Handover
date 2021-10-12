@@ -1,9 +1,9 @@
-﻿    using System;
+﻿using System;
 using System.Windows.Forms;
-// Your Name, Team Name, Sprint Number
-// Date:
-// Version:
-// Project description
+// Kyle Watson, Team Fast Koalas, Sprint 2
+// Date: 12/10/2021
+// Version: 1
+// Project description: Astronomical Processing Application.
 namespace SprintOneFramework
 {
     public partial class AstroForm : Form
@@ -159,7 +159,7 @@ namespace SprintOneFramework
             else
             {
                 StatusMessage.Text = "ERROR: Array full or Number not entered";
-            }           
+            }
         }
         #endregion
         #region Edit Button
@@ -178,7 +178,7 @@ namespace SprintOneFramework
             else
             {
                 StatusMessage.Text = "ERROR: Please select from the List Box";
-            }    
+            }
         }
         #endregion
         #region Delete Button
@@ -222,7 +222,7 @@ namespace SprintOneFramework
                     highestNumber = DataArray[i];
                 }
             }
-            Console.WriteLine("range is " + (highestNumber-lowestNumber));
+            Console.WriteLine("range is " + (highestNumber - lowestNumber));
             textBoxRange.Text = Convert.ToString(highestNumber - lowestNumber);
 
         }
@@ -234,7 +234,7 @@ namespace SprintOneFramework
             for (int i = 0; i < ArraySize; i++)
                 if (DataArray[i] == targetValue)
                     Console.WriteLine("Value found at index " + i);
-                return;
+            return;
 
         }
         #endregion
@@ -309,6 +309,7 @@ namespace SprintOneFramework
                 MidExtremeTextBox.Text = midExtreme.ToString();
                 StatusMessage.Text = "The mid-extreme of this array is: " + midExtreme;
             }
-         }
+        }
         #endregion
     }
+}
