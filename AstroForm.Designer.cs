@@ -42,7 +42,7 @@ namespace SprintOneFramework
             this.rangeButton = new System.Windows.Forms.Button();
             this.sequentialButton = new System.Windows.Forms.Button();
             this.modeButton = new System.Windows.Forms.Button();
-            this.textBoxRange = new System.Windows.Forms.TextBox();
+            this.TextBoxRange = new System.Windows.Forms.TextBox();
             this.MidExtremeButton = new System.Windows.Forms.Button();
             this.ButtonAverage = new System.Windows.Forms.Button();
             this.AverageTextBox = new System.Windows.Forms.TextBox();
@@ -157,7 +157,7 @@ namespace SprintOneFramework
             this.rangeButton.TabIndex = 9;
             this.rangeButton.Text = "Range";
             this.rangeButton.UseVisualStyleBackColor = true;
-            this.rangeButton.Click += new System.EventHandler(this.rangeButton_Click);
+            this.rangeButton.Click += new System.EventHandler(this.RangeButton_Click);
             // 
             // sequentialButton
             // 
@@ -167,7 +167,7 @@ namespace SprintOneFramework
             this.sequentialButton.TabIndex = 10;
             this.sequentialButton.Text = "Sequential Search";
             this.sequentialButton.UseVisualStyleBackColor = true;
-            this.sequentialButton.Click += new System.EventHandler(this.sequentialButton_Click);
+            this.sequentialButton.Click += new System.EventHandler(this.SequentialButton_Click);
             // 
             // modeButton
             // 
@@ -177,16 +177,16 @@ namespace SprintOneFramework
             this.modeButton.TabIndex = 11;
             this.modeButton.Text = "Mode";
             this.modeButton.UseVisualStyleBackColor = true;
-            this.modeButton.Click += new System.EventHandler(this.modeButton_Click);
+            this.modeButton.Click += new System.EventHandler(this.ModeButton_Click);
             // 
-            // textBoxRange
+            // TextBoxRange
             // 
-            this.textBoxRange.Location = new System.Drawing.Point(302, 172);
-            this.textBoxRange.Multiline = true;
-            this.textBoxRange.Name = "textBoxRange";
-            this.textBoxRange.ReadOnly = true;
-            this.textBoxRange.Size = new System.Drawing.Size(104, 38);
-            this.textBoxRange.TabIndex = 12;
+            this.TextBoxRange.Location = new System.Drawing.Point(302, 172);
+            this.TextBoxRange.Multiline = true;
+            this.TextBoxRange.Name = "TextBoxRange";
+            this.TextBoxRange.ReadOnly = true;
+            this.TextBoxRange.Size = new System.Drawing.Size(104, 38);
+            this.TextBoxRange.TabIndex = 12;
             // 
             // MidExtremeButton
             // 
@@ -245,7 +245,7 @@ namespace SprintOneFramework
             this.Controls.Add(this.AverageTextBox);
             this.Controls.Add(this.ButtonAverage);
             this.Controls.Add(this.MidExtremeButton);
-            this.Controls.Add(this.textBoxRange);
+            this.Controls.Add(this.TextBoxRange);
             this.Controls.Add(this.modeButton);
             this.Controls.Add(this.sequentialButton);
             this.Controls.Add(this.rangeButton);
@@ -282,7 +282,7 @@ namespace SprintOneFramework
         private System.Windows.Forms.Button rangeButton;
         private System.Windows.Forms.Button sequentialButton;
         private System.Windows.Forms.Button modeButton;
-        private System.Windows.Forms.TextBox textBoxRange;
+        private System.Windows.Forms.TextBox TextBoxRange;
         private System.Windows.Forms.Button MidExtremeButton;
         private System.Windows.Forms.Button ButtonAverage;
         private System.Windows.Forms.TextBox AverageTextBox;

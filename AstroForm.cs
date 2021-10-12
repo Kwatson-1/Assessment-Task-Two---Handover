@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Windows.Forms;
-// Kyle Watson, Team Fast Koalas, Sprint 2
+// Kyle Watson and Kristiin Tribbeck, Team Fast Koalas, Sprint 2
 // Date: 12/10/2021
-// Version: 2
-// Project description: Astronomical Processing Application.
+// Version: 3
+// Project description: Application for recording neutrino interactions per hour over a day.
+// Processes include 4 mathematical functions and sequential search button. Values are displayed in a read only textbox.
 namespace SprintOneFramework
 {
     public partial class AstroForm : Form
@@ -13,12 +14,17 @@ namespace SprintOneFramework
         {
             InitializeComponent();
         }
+        // Declare variable for max array size.
+        // Initialisation for array.
+        // Initialisation for the empty pointer.
         static int ArraySize = 24;
         int[] DataArray = new int[ArraySize];
         bool Sorted = false;
         int ArrayElements = 0;
         #endregion
         #region Binary Search
+        // Requires the array to be sorted.
+        // Searches for a desired value in the array and if found returns its index otherwise displays not found in the status strip.
         private void ButtonBinarySearch_Click(object sender, EventArgs e)
         {
             StatusMessage.Text = "";
@@ -67,6 +73,7 @@ namespace SprintOneFramework
         }
         #endregion
         #region Bubble Sort
+        // Functionality for the bubble sort button.
         private void ButtonBubbleSort_Click(object sender, EventArgs e)
         {
             StatusMessage.Text = "";
@@ -88,6 +95,7 @@ namespace SprintOneFramework
         }
         #endregion
         #region TextBox and ListBox
+        // Displays the user selected item from the display box into the text box.
         private void ListBoxOutput_MouseClick(object sender, MouseEventArgs e)
         {
             StatusMessage.Text = "";
@@ -105,6 +113,7 @@ namespace SprintOneFramework
         }
         #endregion
         #region Fill Button
+        // Method for filling the array with random integers and displaying the values in the list box.
         private void ButtonFill_Click(object sender, EventArgs e)
         {
             StatusMessage.Text = "";
@@ -116,13 +125,14 @@ namespace SprintOneFramework
             }
             AverageTextBox.Clear();
             MidExtremeTextBox.Clear();
-            textBoxRange.Clear();
+            TextBoxRange.Clear();
             ModeTextBox.Clear();
             DisplayArray();
             StatusMessage.Text = "Array filled with Random Numbers";
         }
         #endregion
         #region Display Array
+        // Method for displaying the array inside of the list box.
         private void DisplayArray()
         {
             ListBoxOutput.Items.Clear();
@@ -135,6 +145,9 @@ namespace SprintOneFramework
         }
         #endregion
         #region Add Button
+        // Functionality for the button which allows the user to add data.
+        // Exception handling for invalid user input.
+        // Exception handling for if the array is full already.
         private void ButtonAdd_Click(object sender, EventArgs e)
         {
             StatusMessage.Text = "";
@@ -160,6 +173,8 @@ namespace SprintOneFramework
         }
         #endregion
         #region Edit Button
+        // Functionality for editing data values inside of the array.
+        // Error handling for incorrect user input.
         private void ButtonEdit_Click(object sender, EventArgs e)
         {
             StatusMessage.Text = "";
@@ -179,6 +194,8 @@ namespace SprintOneFramework
         }
         #endregion
         #region Delete Button
+        // Functionality for the button which allows the user to delete data.
+        // Exception handling for if the user has not selected a value to delete.
         private void ButtonDelete_Click(object sender, EventArgs e)
         {
             StatusMessage.Text = "";
@@ -204,7 +221,8 @@ namespace SprintOneFramework
         }
         #endregion
         #region Range Button
-        private void rangeButton_Click(object sender, EventArgs e)
+        //Functionality for the range button which displays the difference between the highest and the lowest values in the array into a read only text box.
+        private void RangeButton_Click(object sender, EventArgs e)
         {
             int lowestNumber = DataArray[0];
             int highestNumber = DataArray[0];
@@ -219,21 +237,25 @@ namespace SprintOneFramework
                     highestNumber = DataArray[i];
                 }
             }
-            Console.WriteLine("range is " + (highestNumber - lowestNumber));
-            textBoxRange.Text = Convert.ToString(highestNumber - lowestNumber);
-
+            TextBoxRange.Text = Convert.ToString(highestNumber - lowestNumber);
         }
         #endregion
         #region Sequential Button
-        private void sequentialButton_Click(object sender, EventArgs e)
+        // Functionality for the sequential search button.
+        // Will loop through the data set starting from index 0 until it finds either the target value or the final index of the array.
+        private void SequentialButton_Click(object sender, EventArgs e)
         {
             try
             {
                 int targetValue = int.Parse(TextBoxInput.Text);
                 for (int i = 0; i < ArraySize; i++)
                     if (DataArray[i] == targetValue)
-                        StatusMessage.Text = ("Value found at index " + i);
-                return;
+                    {
+                        StatusMessage.Text = "Value found at index " + i;
+                        return;
+                    }
+                    else
+                        StatusMessage.Text = "Value not found";
             }
             catch (System.FormatException)
             {
@@ -243,7 +265,9 @@ namespace SprintOneFramework
         }
         #endregion
         #region Mode Button
-        private void modeButton_Click(object sender, EventArgs e)
+        // Functionality for the mode button which displays the value that appears most often in the array.
+        // If the mode of the data set is shared between two values, only the highest value will be displayed in the text box.
+        private void ModeButton_Click(object sender, EventArgs e)
         {
             int element;
             int frequency = 1;
@@ -260,22 +284,19 @@ namespace SprintOneFramework
                         counter++;
                     }
                 }
-                if (counter > frequency)
+                if (counter >= frequency)
                 {
                     frequency = counter;
                     mode = element;
                 }
-                // added 
-                ModeTextBox.Text = element.ToString();
+                ModeTextBox.Text = mode.ToString();
                 StatusMessage.Text = "The frequency of elements in the list is: " + frequency;
             }
-            Console.WriteLine("Mode is " + mode);
-            //this is a github test
-            //this is another github test
-            // anotheeer test
         }
         #endregion
         #region Average Button
+        // Functionality for the average button which displays into a read only text box.
+        // The average is the total of all values in the array divided by the total number of values.
         private void ButtonAverage_Click(object sender, EventArgs e)
         {
 
@@ -292,6 +313,8 @@ namespace SprintOneFramework
         }
         #endregion
         #region Mid-Extreme Button
+        // Functionality for the mid extreme button which displays into a read only text box.
+        // The mid-extreme demonstrates the the means of the lowest and highest values.
         private void MidExtremeButton_Click(object sender, EventArgs e)
         {
             int minRange = DataArray[0];
@@ -316,6 +339,7 @@ namespace SprintOneFramework
         }
         #endregion
         #region Input Handling
+        // Handling of invalid user input into the text box.
         private void TextBoxInput_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
