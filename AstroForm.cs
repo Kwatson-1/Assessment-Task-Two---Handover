@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 // Kyle Watson, Team Fast Koalas, Sprint 2
 // Date: 12/10/2021
-// Version: 1
+// Version: 2
 // Project description: Astronomical Processing Application.
 namespace SprintOneFramework
 {
@@ -227,11 +227,18 @@ namespace SprintOneFramework
         #region Sequential Button
         private void sequentialButton_Click(object sender, EventArgs e)
         {
-            int targetValue = int.Parse(TextBoxInput.Text);
-            for (int i = 0; i < ArraySize; i++)
-                if (DataArray[i] == targetValue)
-                    StatusMessage.Text = ("Value found at index " + i);
-            return;
+            try
+            {
+                int targetValue = int.Parse(TextBoxInput.Text);
+                for (int i = 0; i < ArraySize; i++)
+                    if (DataArray[i] == targetValue)
+                        StatusMessage.Text = ("Value found at index " + i);
+                return;
+            }
+            catch (System.FormatException)
+            {
+                StatusMessage.Text = "ERROR: Please enter a valid integer to search";
+            }
 
         }
         #endregion
