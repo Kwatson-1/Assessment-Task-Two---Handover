@@ -88,13 +88,6 @@ namespace SprintOneFramework
         }
         #endregion
         #region TextBox and ListBox
-        private void TextBoxInput_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
         private void ListBoxOutput_MouseClick(object sender, MouseEventArgs e)
         {
             StatusMessage.Text = "";
@@ -121,6 +114,10 @@ namespace SprintOneFramework
                 DataArray[x] = rand.Next(10, 100);
                 ArrayElements++;
             }
+            AverageTextBox.Clear();
+            MidExtremeTextBox.Clear();
+            textBoxRange.Clear();
+            ModeTextBox.Clear();
             DisplayArray();
             StatusMessage.Text = "Array filled with Random Numbers";
         }
@@ -227,13 +224,13 @@ namespace SprintOneFramework
 
         }
         #endregion
-        #region Sequencial Button
+        #region Sequential Button
         private void sequentialButton_Click(object sender, EventArgs e)
         {
             int targetValue = int.Parse(TextBoxInput.Text);
             for (int i = 0; i < ArraySize; i++)
                 if (DataArray[i] == targetValue)
-                    Console.WriteLine("Value found at index " + i);
+                    StatusMessage.Text = ("Value found at index " + i);
             return;
 
         }
@@ -308,6 +305,15 @@ namespace SprintOneFramework
                 midExtreme = (minRange + maxRange) / 2;
                 MidExtremeTextBox.Text = midExtreme.ToString();
                 StatusMessage.Text = "The mid-extreme of this array is: " + midExtreme;
+            }
+        }
+        #endregion
+        #region Input Handling
+        private void TextBoxInput_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
             }
         }
         #endregion
