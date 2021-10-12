@@ -123,6 +123,7 @@ namespace SprintOneFramework
                 DataArray[x] = rand.Next(10, 100);
                 ArrayElements++;
             }
+            TextBoxInput.Clear();
             AverageTextBox.Clear();
             MidExtremeTextBox.Clear();
             TextBoxRange.Clear();
@@ -258,6 +259,10 @@ namespace SprintOneFramework
                         StatusMessage.Text = "Value not found";
             }
             catch (System.FormatException)
+            {
+                StatusMessage.Text = "ERROR: Please enter a valid integer to search";
+            }
+            catch (System.OverflowException)
             {
                 StatusMessage.Text = "ERROR: Please enter a valid integer to search";
             }
