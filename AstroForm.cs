@@ -239,6 +239,7 @@ namespace SprintOneFramework
                 }
             }
             TextBoxRange.Text = Convert.ToString(highestNumber - lowestNumber);
+            StatusMessage.Text = "Range has been successfully calculated";
         }
         #endregion
         #region Sequential Button
@@ -253,10 +254,12 @@ namespace SprintOneFramework
                     if (DataArray[i] == targetValue)
                     {
                         StatusMessage.Text = "Value found at index " + i;
+                        ListBoxOutput.SelectedIndex = i;
                         return;
                     }
                     else
                         StatusMessage.Text = "Value not found";
+
             }
             catch (System.FormatException)
             {
@@ -295,7 +298,7 @@ namespace SprintOneFramework
                     mode = element;
                 }
                 ModeTextBox.Text = mode.ToString();
-                StatusMessage.Text = "The frequency of elements in the list is: " + frequency;
+                StatusMessage.Text = "Mode has been successfully calculated";
             }
         }
         #endregion
@@ -305,16 +308,16 @@ namespace SprintOneFramework
         private void ButtonAverage_Click(object sender, EventArgs e)
         {
 
-            int sum = 0;
-            int average = 0;
+            double sum = 0;
+            double average = 0;
 
             for (int x = 0; x < DataArray.Length; x++)
             {
                 sum += DataArray[x];
             }
-            average = sum / DataArray.Length;
+            average = Math.Round((Double)(sum / DataArray.Length), 2);
             AverageTextBox.Text = average.ToString();
-            StatusMessage.Text = "The sum of elements in the list is: " + sum;
+            StatusMessage.Text = "Average has been successfully calculated";
         }
         #endregion
         #region Mid-Extreme Button
@@ -339,7 +342,7 @@ namespace SprintOneFramework
                 }
                 midExtreme = (minRange + maxRange) / 2;
                 MidExtremeTextBox.Text = midExtreme.ToString();
-                StatusMessage.Text = "The mid-extreme of this array is: " + midExtreme;
+                StatusMessage.Text = "Mid-Extreme has been successfully calculated";
             }
         }
         #endregion

@@ -29,6 +29,7 @@ namespace SprintOneFramework
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.ButtonFill = new System.Windows.Forms.Button();
             this.ListBoxOutput = new System.Windows.Forms.ListBox();
             this.TextBoxInput = new System.Windows.Forms.TextBox();
@@ -48,6 +49,7 @@ namespace SprintOneFramework
             this.AverageTextBox = new System.Windows.Forms.TextBox();
             this.ModeTextBox = new System.Windows.Forms.TextBox();
             this.MidExtremeTextBox = new System.Windows.Forms.TextBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.statusStripErrorMsg.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,6 +62,7 @@ namespace SprintOneFramework
             this.ButtonFill.Size = new System.Drawing.Size(78, 38);
             this.ButtonFill.TabIndex = 0;
             this.ButtonFill.Text = "Auto Fill";
+            this.toolTip1.SetToolTip(this.ButtonFill, "Fills the array with 24 random values");
             this.ButtonFill.UseVisualStyleBackColor = false;
             this.ButtonFill.Click += new System.EventHandler(this.ButtonFill_Click);
             // 
@@ -72,6 +75,7 @@ namespace SprintOneFramework
             this.ListBoxOutput.Name = "ListBoxOutput";
             this.ListBoxOutput.Size = new System.Drawing.Size(120, 260);
             this.ListBoxOutput.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.ListBoxOutput, "Array values will be displayed here");
             this.ListBoxOutput.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ListBoxOutput_MouseClick);
             // 
             // TextBoxInput
@@ -81,6 +85,7 @@ namespace SprintOneFramework
             this.TextBoxInput.ShortcutsEnabled = false;
             this.TextBoxInput.Size = new System.Drawing.Size(394, 20);
             this.TextBoxInput.TabIndex = 2;
+            this.toolTip1.SetToolTip(this.TextBoxInput, "Enter a valid 2 digit integer");
             this.TextBoxInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxInput_KeyPress);
             // 
             // ButtonBubbleSort
@@ -90,6 +95,7 @@ namespace SprintOneFramework
             this.ButtonBubbleSort.Size = new System.Drawing.Size(78, 38);
             this.ButtonBubbleSort.TabIndex = 3;
             this.ButtonBubbleSort.Text = "Bubble Sort";
+            this.toolTip1.SetToolTip(this.ButtonBubbleSort, "Sort the array");
             this.ButtonBubbleSort.UseVisualStyleBackColor = true;
             this.ButtonBubbleSort.Click += new System.EventHandler(this.ButtonBubbleSort_Click);
             // 
@@ -100,6 +106,7 @@ namespace SprintOneFramework
             this.ButtonBinarySearch.Size = new System.Drawing.Size(78, 38);
             this.ButtonBinarySearch.TabIndex = 4;
             this.ButtonBinarySearch.Text = "Binary Search";
+            this.toolTip1.SetToolTip(this.ButtonBinarySearch, "Use a binary search to find a value in the array");
             this.ButtonBinarySearch.UseVisualStyleBackColor = true;
             this.ButtonBinarySearch.Click += new System.EventHandler(this.ButtonBinarySearch_Click);
             // 
@@ -110,6 +117,7 @@ namespace SprintOneFramework
             this.ButtonAdd.Size = new System.Drawing.Size(78, 38);
             this.ButtonAdd.TabIndex = 5;
             this.ButtonAdd.Text = "Add";
+            this.toolTip1.SetToolTip(this.ButtonAdd, "Add a value to the array");
             this.ButtonAdd.UseVisualStyleBackColor = true;
             this.ButtonAdd.Click += new System.EventHandler(this.ButtonAdd_Click);
             // 
@@ -120,6 +128,7 @@ namespace SprintOneFramework
             this.ButtonEdit.Size = new System.Drawing.Size(78, 38);
             this.ButtonEdit.TabIndex = 6;
             this.ButtonEdit.Text = "Edit";
+            this.toolTip1.SetToolTip(this.ButtonEdit, "Edit a value in the array");
             this.ButtonEdit.UseVisualStyleBackColor = true;
             this.ButtonEdit.Click += new System.EventHandler(this.ButtonEdit_Click);
             // 
@@ -130,6 +139,7 @@ namespace SprintOneFramework
             this.ButtonDelete.Size = new System.Drawing.Size(78, 38);
             this.ButtonDelete.TabIndex = 7;
             this.ButtonDelete.Text = "Delete";
+            this.toolTip1.SetToolTip(this.ButtonDelete, "Remove a value from the array");
             this.ButtonDelete.UseVisualStyleBackColor = true;
             this.ButtonDelete.Click += new System.EventHandler(this.ButtonDelete_Click);
             // 
@@ -156,6 +166,7 @@ namespace SprintOneFramework
             this.rangeButton.Size = new System.Drawing.Size(78, 38);
             this.rangeButton.TabIndex = 9;
             this.rangeButton.Text = "Range";
+            this.toolTip1.SetToolTip(this.rangeButton, "Calculates the range");
             this.rangeButton.UseVisualStyleBackColor = true;
             this.rangeButton.Click += new System.EventHandler(this.RangeButton_Click);
             // 
@@ -166,6 +177,7 @@ namespace SprintOneFramework
             this.sequentialButton.Size = new System.Drawing.Size(78, 38);
             this.sequentialButton.TabIndex = 10;
             this.sequentialButton.Text = "Sequential Search";
+            this.toolTip1.SetToolTip(this.sequentialButton, "Use a sequential search to find a value in the array");
             this.sequentialButton.UseVisualStyleBackColor = true;
             this.sequentialButton.Click += new System.EventHandler(this.SequentialButton_Click);
             // 
@@ -176,6 +188,7 @@ namespace SprintOneFramework
             this.modeButton.Size = new System.Drawing.Size(78, 38);
             this.modeButton.TabIndex = 11;
             this.modeButton.Text = "Mode";
+            this.toolTip1.SetToolTip(this.modeButton, "Calculates the mode");
             this.modeButton.UseVisualStyleBackColor = true;
             this.modeButton.Click += new System.EventHandler(this.ModeButton_Click);
             // 
@@ -195,6 +208,7 @@ namespace SprintOneFramework
             this.MidExtremeButton.Size = new System.Drawing.Size(78, 38);
             this.MidExtremeButton.TabIndex = 13;
             this.MidExtremeButton.Text = "Mid-extreme";
+            this.toolTip1.SetToolTip(this.MidExtremeButton, "Calculates the mid-extreme");
             this.MidExtremeButton.UseVisualStyleBackColor = true;
             this.MidExtremeButton.Click += new System.EventHandler(this.MidExtremeButton_Click);
             // 
@@ -205,6 +219,7 @@ namespace SprintOneFramework
             this.ButtonAverage.Size = new System.Drawing.Size(78, 38);
             this.ButtonAverage.TabIndex = 14;
             this.ButtonAverage.Text = "Average";
+            this.toolTip1.SetToolTip(this.ButtonAverage, "Calculates the average");
             this.ButtonAverage.UseVisualStyleBackColor = true;
             this.ButtonAverage.Click += new System.EventHandler(this.ButtonAverage_Click);
             // 
@@ -234,6 +249,11 @@ namespace SprintOneFramework
             this.MidExtremeTextBox.ReadOnly = true;
             this.MidExtremeTextBox.Size = new System.Drawing.Size(104, 38);
             this.MidExtremeTextBox.TabIndex = 17;
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.ShowAlways = true;
+            this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             // 
             // AstroForm
             // 
@@ -288,6 +308,7 @@ namespace SprintOneFramework
         private System.Windows.Forms.TextBox AverageTextBox;
         private System.Windows.Forms.TextBox ModeTextBox;
         private System.Windows.Forms.TextBox MidExtremeTextBox;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 
